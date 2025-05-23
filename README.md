@@ -18,8 +18,52 @@ O foco é em preparar os dados para os modelos de dados.
 
 Nesta etapa vamos aproveitar a limpeza dos dados e tratamento de valores que foi feita na etapa anterior e criar um modelo preditivo de regressão utilizando algumas técnicas e verificar o que fica melhor para a distruição dos dados.
 
+
 ## Projeto Entregável
 
 Esta fase consiste em criar um pacote utilizavel com o modelo preditivo realizado na primeira parte do desafio e apresentar os resultados obtivos.
 
 Os arquivos referentes a esta fase estão na pasta **projeto**.
+
+
+### Instalação para o ambiente
+
+1. Crie um ambiente virtual:
+```bash
+virtualenv .venv 
+source .venv/bin/activate
+```
+2. Faça a instalação das bibliotecas:
+```bash
+pip install -r requirements.txt
+```
+3. Execute o projeto:
+```bash
+make run-dev
+```
+
+
+#### Exemplo de requisição para o endpoint `/predict`
+
+**Usando curl:**
+```bash
+curl -X POST "http://localhost:8004/predict" \
+  -H "Content-Type: application/json" \
+  -d '{"smoker": "no", "age": 33, "bmi": 25, "children": 0}'
+```
+
+**Usando python:**
+```python
+import requests
+
+url = "http://localhost:8004/predict"
+data = {
+    "smoker": "no",
+    "age": 33,
+    "bmi": 25,
+    "children": 0
+}
+
+response = requests.post(url, json=data)
+print(response.json())
+```
