@@ -14,7 +14,7 @@ st.subheader('Objetivo do Projeto')
 st.markdown('''Nosso objetivo é analisar a estrutura dos dados, realizar a limpeza necessária e explorar questionamentos sobre os insights que podemos extrair a partir deles.''')
 
 # Carregamento dos dados (substituir pelo caminho ou método adequado)
-data = pd.read_csv('dados/insurance.csv')  
+data = pd.read_csv('../analise/dados/insurance.csv')  
 st.subheader('Estrutura e Qualidade dos Dados')
 
 # Exibir shape e tipos das colunas (substituindo data.info())

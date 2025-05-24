@@ -37,9 +37,13 @@ source .venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-3. Execute o projeto:
+3. Execute o projeto da API Predict Service:
 ```bash
 make run-dev
+```
+4. Execute o projeto do frontend:
+```bash
+make run-front-dev
 ```
 
 

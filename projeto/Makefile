@@ -3,3 +3,6 @@ run-dev:
 
 train:
 	python predict_service/ml/wealth_cost_prediction.py;
+
+run-front-dev:
+	streamlit run streamlit-insurance-app/src/app.py
