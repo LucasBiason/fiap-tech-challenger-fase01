@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  train:
+    container_name: predict-service-train
+    build: .
+    command: train
+    volumes:
+      - .:/app
+    network_mode: host
+    
+  app:
+    container_name: predict-service
+    build: .
+    command: runserver
+    volumes:
+      - .:/app
+    network_mode: host

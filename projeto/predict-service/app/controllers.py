@@ -23,4 +23,6 @@ class PredictController:
             float: Predicted insurance charge.
         """
         features = [data.smoker, data.age, data.bmi, data.children]
+        if not all(map(lambda x : x is not None, features)):
+            raise ValueError("No features provided for prediction.")
         return self.predictor.predict(features)
