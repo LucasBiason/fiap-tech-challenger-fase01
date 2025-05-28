@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "c750a605-8e97-4da2-a72c-a8f3b8a63177",
+		"name": "Tech Challenger FIAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7575282"
+	},
+	"item": [
+		{
+			"name": "Predict Cost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"smoker\": \"no\",\n    \"age\": 33,\n    \"bmi\": 25.00,\n    \"children\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8004/predict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
